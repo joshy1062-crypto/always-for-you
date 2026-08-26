@@ -2,14 +2,143 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#253b37" />
     <meta name="description" content="A tiny love letter, made just for you." />
     <title>For You, Always</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Georgia', serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 600px;
+      }
+
+      .letter {
+        background: white;
+        padding: 60px 40px;
+        border-radius: 10px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        animation: fadeIn 0.8s ease-in;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      h1 {
+        color: #764ba2;
+        font-size: 2.5em;
+        margin-bottom: 40px;
+        font-weight: normal;
+        letter-spacing: 2px;
+      }
+
+      .content {
+        text-align: left;
+        line-height: 1.8;
+        color: #333;
+        margin-bottom: 30px;
+      }
+
+      .content p {
+        margin-bottom: 20px;
+        font-size: 1.1em;
+      }
+
+      .heart {
+        font-size: 3em;
+        margin: 30px 0;
+        animation: heartBeat 1.5s infinite;
+      }
+
+      @keyframes heartBeat {
+        0%, 100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+      }
+
+      .signature {
+        font-style: italic;
+        color: #764ba2;
+        font-weight: bold;
+      }
+
+      .footer {
+        border-top: 1px solid #ddd;
+        padding-top: 20px;
+        margin-top: 30px;
+        color: #999;
+        font-size: 0.9em;
+      }
+
+      @media (max-width: 600px) {
+        .letter {
+          padding: 40px 25px;
+        }
+
+        h1 {
+          font-size: 2em;
+        }
+
+        .content p {
+          font-size: 1em;
+        }
+
+        .heart {
+          font-size: 2.5em;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <div class="container">
+      <div class="letter">
+        <h1>For You, Always</h1>
+        <div class="content">
+          <p>Dear You,</p>
+          
+          <p>I wanted to create something special, just for you. This tiny website is my way of saying how much you mean to me.</p>
+          
+          <p>Every moment with you is precious. You light up my world in ways I never thought possible.</p>
+          
+          <div class="heart">❤️</div>
+          
+          <p>This is just the beginning. Feel free to customize this message and make it your own.</p>
+          
+          <p>Forever yours,<br>
+          <span class="signature">Your Beloved</span></p>
+        </div>
+        
+        <div class="footer">
+          <p>Made with love ❤️</p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
